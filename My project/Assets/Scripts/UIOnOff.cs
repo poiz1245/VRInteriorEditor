@@ -12,7 +12,6 @@ public class UIOnOff : MonoBehaviour
     void Update()
     {
         uiOnOff.action.performed += UiOnOff;
- 
     }
 
     void UiOnOff(InputAction.CallbackContext obj)
