@@ -5,10 +5,10 @@ using UnityEngine;
 public class ObjectSpawn : MonoBehaviour
 {
     [SerializeField] GameObject selectedObj;
-    [SerializeField] Transform rightHandPos;
+    [SerializeField] Transform objSpawnPos;
 
     public void SelectButton()
     {
-        Instantiate(selectedObj, rightHandPos);
+        Instantiate(selectedObj, objSpawnPos);
     }
 }

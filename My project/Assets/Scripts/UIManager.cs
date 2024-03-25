@@ -6,8 +6,6 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
-    public GameObject activePanel { get; set; }
-    public GameObject previousPanel { get; set; }
     public GameObject currentPanel { get; set; }
 
     [SerializeField] GameObject dummyPanel;
