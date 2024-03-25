@@ -1248,6 +1248,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Yaw Rotation",
+                    "type": "Button",
+                    "id": "27ba1940-4898-4a4f-942b-7e3461b751e3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pitch Rotation",
+                    "type": "Button",
+                    "id": "e5ceffbe-ffb7-4fbc-ae9e-134dca0e461c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1490,6 +1508,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "UIOnOff",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f05c120f-9073-48db-9fac-8190481930e6",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Yaw Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fe998555-41d5-4ae8-89d5-c70de7c651c1",
+                    "path": "<XRController>{RightHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch Rotation",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
