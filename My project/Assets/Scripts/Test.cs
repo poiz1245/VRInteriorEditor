@@ -45,7 +45,7 @@ public class Test : MonoBehaviour
     {
         if (Physics.Raycast(controllerPos.position, controllerPos.forward, out hitInfo, 10f, raycastLayerMask))
         {
-            if (!isActive && objPreviewinstance == null)
+            if (!isActive && objPreviewinstance == null && objPreviewPrefab != null)
             {
                 objPreviewinstance = Instantiate(objPreviewPrefab, hitInfo.point, Quaternion.identity);
                 isActive = true;
