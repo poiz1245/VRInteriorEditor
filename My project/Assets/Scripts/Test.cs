@@ -7,14 +7,14 @@ public class Test : MonoBehaviour
 {
     public static Test Instance;
 
-    [SerializeField] LayerMask raycastLayerMask;
-    [SerializeField] Transform controllerPos;
-    [SerializeField] GameObject objPreviewPrefab;
+    public Vector3 rayPos;
+    public GameObject objPreviewPrefab;
     GameObject objPreviewinstance;
 
-    [SerializeField] bool isActive;
 
-    public Vector3 rayPos;
+    [SerializeField] LayerMask raycastLayerMask;
+    [SerializeField] Transform controllerPos;
+    [SerializeField] bool isActive;
 
     RaycastHit hitInfo;
 

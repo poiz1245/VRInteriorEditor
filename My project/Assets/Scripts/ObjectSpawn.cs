@@ -10,6 +10,7 @@ public class ObjectSpawn : MonoBehaviour
 
     public void SelectButton()
     {
+        Test.Instance.objPreviewPrefab = selectedObj;
         Instantiate(selectedObj, objSpawnPos);
     }
 }
