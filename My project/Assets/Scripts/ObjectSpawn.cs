@@ -6,6 +6,7 @@ public class ObjectSpawn : MonoBehaviour
 {
     [SerializeField] GameObject selectedObj;
     [SerializeField] Transform objSpawnPos;
+    [SerializeField] Transform rightController;
 
     public void SelectButton()
     {

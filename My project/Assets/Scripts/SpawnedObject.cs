@@ -13,6 +13,7 @@ public class SpawnedObject : MonoBehaviour
     void Update()
     {
         Rotation();
+        Move();
     }
 
     public void Rotation()
@@ -28,7 +29,7 @@ public class SpawnedObject : MonoBehaviour
     }
     public void Move()
     {
-
+        transform.position = Test.Instance.rayPos;
     }
 }
 
