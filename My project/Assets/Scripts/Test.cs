@@ -37,18 +37,25 @@ public class Test : MonoBehaviour
     private void Start()
     {
         isActive = false;
-
-        raycastLayerMask = (1 << 8) | (1 << 9) | (1 << 10);
     }
 
     private void Update()
     {
+        if (spawnedObjectCategory == 1)
+        {
+            raycastLayerMask = (1 << 8) | (1 << 9) | (1 << 10);
+        }
+        else if(spawnedObjectCategory == 2)
+        {
+            raycastLayerMask = 7;
+        }
+
         Spawn();
     }
 
     public void Spawn()
     {
-        if(Physics.Raycast(controllerPos.position, controllerPos.forward, out hitInfo, 10f, raycastLayerMask))
+        if (Physics.Raycast(controllerPos.position, controllerPos.forward, out hitInfo, 10f, raycastLayerMask))
         {
             hitLayer = hitInfo.collider.gameObject.layer;
 
@@ -82,6 +89,10 @@ public class Test : MonoBehaviour
             eulerAngle = new Vector3(0, 90, 0);
         }
         else if (hitLayer == 10)
+        {
+            eulerAngle = new Vector3(0, 0, 0);
+        }
+        else if(hitLayer == 7)
         {
             eulerAngle = new Vector3(0, 0, 0);
         }
