@@ -12,8 +12,14 @@ public class SpawnedObject : MonoBehaviour
 
     void Update()
     {
+        EulerSetting();
         Rotation();
         Move();
+    }
+
+    public void EulerSetting()
+    {
+        transform.rotation = Quaternion.Euler(Test.Instance.eulerAngle);
     }
 
     public void Rotation()

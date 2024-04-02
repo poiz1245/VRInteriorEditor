@@ -16,7 +16,9 @@ public class Test : MonoBehaviour
     [SerializeField] Transform controllerPos;
     [SerializeField] bool isActive;
 
+    int hitLayer;
     RaycastHit hitInfo;
+    public Vector3 eulerAngle;
 
     private void Awake()
     {
@@ -34,33 +36,56 @@ public class Test : MonoBehaviour
     private void Start()
     {
         isActive = false;
+
+        raycastLayerMask = (1 << 8) | (1 << 9) | (1 << 10);
     }
 
     private void Update()
     {
         Spawn();
+
+        print(hitLayer);
+        print(eulerAngle);
     }
 
     public void Spawn()
     {
-        if (Physics.Raycast(controllerPos.position, controllerPos.forward, out hitInfo, 10f, raycastLayerMask))
+        if(Physics.Raycast(controllerPos.position, controllerPos.forward, out hitInfo, 10f, raycastLayerMask))
         {
+            hitLayer = hitInfo.collider.gameObject.layer;
+
+            EulerSetting();
+
             if (!isActive && objPreviewinstance == null && objPreviewPrefab != null)
             {
-                objPreviewinstance = Instantiate(objPreviewPrefab, hitInfo.point, Quaternion.identity);
+                objPreviewinstance = Instantiate(objPreviewPrefab, hitInfo.point, Quaternion.Euler(eulerAngle));
                 isActive = true;
             }
 
             rayPos = hitInfo.point;
         }
-        else
+        else if (isActive)
         {
-            if (isActive)
-            {
-                Destroy(objPreviewinstance);
-                objPreviewinstance = null;
-                isActive = false;
-            }
+            Destroy(objPreviewinstance);
+            objPreviewinstance = null;
+            isActive = false;
+        }
+
+
+    }
+    private void EulerSetting()
+    {
+        if (hitLayer == 8)
+        {
+            eulerAngle = new Vector3(0, -90, 0);
+        }
+        else if (hitLayer == 9)
+        {
+            eulerAngle = new Vector3(0, 90, 0);
+        }
+        else if (hitLayer == 10)
+        {
+            eulerAngle = new Vector3(0, 0, 0);
         }
     }
 }
