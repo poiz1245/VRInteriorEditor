@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallObjectSpawn : MonoBehaviour
+public class FloorObjectSpawn : MonoBehaviour
 {
     [SerializeField] GameObject selectedObj;
 
@@ -10,6 +10,5 @@ public class WallObjectSpawn : MonoBehaviour
     {
         Test.Instance.objPreviewPrefab = selectedObj;
         Test.Instance.spawnedObjectCategory = 2;
-
     }
 }

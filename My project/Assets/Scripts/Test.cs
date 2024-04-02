@@ -18,7 +18,7 @@ public class Test : MonoBehaviour
     [SerializeField] bool isActive;
 
     int hitLayer;
-    LayerMask raycastLayerMask;
+    [SerializeField] LayerMask raycastLayerMask;
     RaycastHit hitInfo;
 
     private void Awake()
@@ -47,7 +47,7 @@ public class Test : MonoBehaviour
         }
         else if(spawnedObjectCategory == 2)
         {
-            raycastLayerMask = 7;
+            raycastLayerMask = (1 << 7);
         }
 
         Spawn();
@@ -75,8 +75,6 @@ public class Test : MonoBehaviour
             objPreviewinstance = null;
             isActive = false;
         }
-
-
     }
     private void EulerSetting()
     {

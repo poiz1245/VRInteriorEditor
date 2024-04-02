@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloorObjectSpawn : MonoBehaviour
+public class WallObjectSpawn : MonoBehaviour
 {
     [SerializeField] GameObject selectedObj;
 
