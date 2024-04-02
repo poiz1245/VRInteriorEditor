@@ -9,16 +9,16 @@ public class Test : MonoBehaviour
 
     public Vector3 rayPos;
     public GameObject objPreviewPrefab;
+    public Vector3 eulerAngle;
+
     GameObject objPreviewinstance;
 
-
-    [SerializeField] LayerMask raycastLayerMask;
     [SerializeField] Transform controllerPos;
     [SerializeField] bool isActive;
 
     int hitLayer;
+    LayerMask raycastLayerMask;
     RaycastHit hitInfo;
-    public Vector3 eulerAngle;
 
     private void Awake()
     {
@@ -43,9 +43,6 @@ public class Test : MonoBehaviour
     private void Update()
     {
         Spawn();
-
-        print(hitLayer);
-        print(eulerAngle);
     }
 
     public void Spawn()
