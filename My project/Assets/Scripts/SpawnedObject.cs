@@ -9,7 +9,13 @@ public class SpawnedObject : MonoBehaviour
     public InputActionReference pitchRotation;
 
     [SerializeField] float rotationSpeed = 1;
+    [SerializeField] int objectCategory;
 
+
+    private void Start()
+    {
+        
+    }
     void Update()
     {
         EulerSetting();

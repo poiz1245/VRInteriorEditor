@@ -10,6 +10,7 @@ public class Test : MonoBehaviour
     public Vector3 rayPos;
     public GameObject objPreviewPrefab;
     public Vector3 eulerAngle;
+    public int spawnedObjectCategory;
 
     GameObject objPreviewinstance;
 
