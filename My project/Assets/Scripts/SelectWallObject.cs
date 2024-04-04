@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class SelectWallObject : MonoBehaviour
 {
-    [SerializeField] GameObject selectedObj;
+    [SerializeField] GameObject selectedObjectPreview;
+    [SerializeField] GameObject selectedObject;
 
     public void SelectButton()
     {
-        PreviewSpawner.Instance.objPreviewPrefab = selectedObj;
-        PreviewSpawner.Instance.spawnedObjectCategory = 1;
+        PreviewSpawner.Instance.objPreviewPrefab = selectedObjectPreview;
+        ObjectSpawner.Instance.selectedObject = selectedObject;
+        PreviewSpawner.Instance.selectedObjectCategory = 1;
 
     }
 }

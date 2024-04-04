@@ -9,8 +9,7 @@ public class PreviewSpawner : MonoBehaviour
 
     public Vector3 rayPos;
     public Vector3 eulerAngle;
-    public int spawnedObjectCategory;
-    public bool isRightTriggerButtonClicked;
+    public int selectedObjectCategory;
 
     public GameObject objPreviewPrefab;
     [SerializeField] GameObject objPreviewinstance;
@@ -38,7 +37,6 @@ public class PreviewSpawner : MonoBehaviour
     private void Start()
     {
         isActive = false;
-        isRightTriggerButtonClicked = false;
     }
 
     private void Update()
@@ -49,11 +47,11 @@ public class PreviewSpawner : MonoBehaviour
 
     private void LayerMaskSetting()
     {
-        if (spawnedObjectCategory == 1)
+        if (selectedObjectCategory == 1)
         {
             raycastLayerMask = (1 << 8) | (1 << 9) | (1 << 10);
         }
-        else if (spawnedObjectCategory == 2)
+        else if (selectedObjectCategory == 2)
         {
             raycastLayerMask = (1 << 7);
         }
@@ -73,12 +71,11 @@ public class PreviewSpawner : MonoBehaviour
                 isActive = true;
             }
         }
-        else if (isActive || isRightTriggerButtonClicked)
+        else if (isActive)
         {
             Destroy(objPreviewinstance);
             objPreviewinstance = null;
             isActive = false;
-            isRightTriggerButtonClicked = false;
         }
     }
     private void EulerSetting()

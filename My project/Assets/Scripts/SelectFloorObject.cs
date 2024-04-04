@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class SelectFloorObject : MonoBehaviour
 {
-    [SerializeField] GameObject selectedObj;
+    [SerializeField] GameObject selectedObjectPreview;
+    [SerializeField] GameObject selectedObject;
+
 
     public void SelectButton()
     {
-        PreviewSpawner.Instance.objPreviewPrefab = selectedObj;
-        PreviewSpawner.Instance.spawnedObjectCategory = 2;
+        PreviewSpawner.Instance.objPreviewPrefab = selectedObjectPreview;
+        ObjectSpawner.Instance.selectedObject = selectedObject;
+        PreviewSpawner.Instance.selectedObjectCategory = 2;
     }
 }
