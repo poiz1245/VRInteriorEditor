@@ -9,12 +9,15 @@ public class PreviewControll : MonoBehaviour
 
     void Update()
     {
-        if(PreviewSpawner.Instance.spawnedObjectCategory == 1)
+        if (!PreviewSpawner.Instance.isRightTriggerButtonClicked)
         {
-            EulerSetting();
-        }
+            if (PreviewSpawner.Instance.spawnedObjectCategory == 1)
+            {
+                EulerSetting();
+            }
 
-        Move();
+            Move();
+        }
     }
 
     private void OnEnable()
