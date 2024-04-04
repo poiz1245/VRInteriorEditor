@@ -1266,6 +1266,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Trigger Click",
+                    "type": "Button",
+                    "id": "546e6195-b386-4e7a-88f3-cbe320248a7e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1530,6 +1539,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pitch Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b00daf40-bc5f-41bf-a5c7-a7fc09617e11",
+                    "path": "<XRController>{RightHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trigger Click",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
