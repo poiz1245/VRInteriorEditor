@@ -15,6 +15,8 @@ public class PreviewControll : MonoBehaviour
         }
 
         Move();
+
+        ObjectSpawner.Instance.eulerAngle = transform.eulerAngles;
     }
 
     private void OnEnable()
