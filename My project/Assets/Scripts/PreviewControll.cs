@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class SpawnedObject : MonoBehaviour
+public class PreviewControll : MonoBehaviour
 {
     public InputActionReference yawRotation;
 
     void Update()
     {
-        if(Test.Instance.spawnedObjectCategory == 1)
+        if(PreviewSpawner.Instance.spawnedObjectCategory == 1)
         {
             EulerSetting();
         }
@@ -34,10 +34,10 @@ public class SpawnedObject : MonoBehaviour
 
     public void EulerSetting()
     {
-        transform.rotation = Quaternion.Euler(Test.Instance.eulerAngle);
+        transform.rotation = Quaternion.Euler(PreviewSpawner.Instance.eulerAngle);
     }
     public void Move()
     {
-        transform.position = Test.Instance.rayPos;
+        transform.position = PreviewSpawner.Instance.rayPos;
     }
 }

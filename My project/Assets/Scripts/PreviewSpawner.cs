@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class Test : MonoBehaviour
+public class PreviewSpawner : MonoBehaviour
 {
-    public static Test Instance;
+    public static PreviewSpawner Instance;
 
     public Vector3 rayPos;
     public Vector3 eulerAngle;

@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallObjectSpawn : MonoBehaviour
+public class SelectWallObject : MonoBehaviour
 {
     [SerializeField] GameObject selectedObj;
 
     public void SelectButton()
     {
-        Test.Instance.objPreviewPrefab = selectedObj;
-        Test.Instance.spawnedObjectCategory = 1;
+        PreviewSpawner.Instance.objPreviewPrefab = selectedObj;
+        PreviewSpawner.Instance.spawnedObjectCategory = 1;
 
     }
 }
