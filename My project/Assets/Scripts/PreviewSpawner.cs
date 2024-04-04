@@ -10,6 +10,7 @@ public class PreviewSpawner : MonoBehaviour
     public Vector3 rayPos;
     public Vector3 eulerAngle;
     public int spawnedObjectCategory;
+    public bool isRightTriggerButtonClicked;
 
     public GameObject objPreviewPrefab;
     [SerializeField] GameObject objPreviewinstance;
@@ -18,7 +19,7 @@ public class PreviewSpawner : MonoBehaviour
     [SerializeField] bool isActive;
 
     int hitLayer;
-    [SerializeField] LayerMask raycastLayerMask;
+    LayerMask raycastLayerMask;
     RaycastHit hitInfo;
 
     private void Awake()
@@ -37,6 +38,7 @@ public class PreviewSpawner : MonoBehaviour
     private void Start()
     {
         isActive = false;
+        isRightTriggerButtonClicked = false;
     }
 
     private void Update()
@@ -71,11 +73,12 @@ public class PreviewSpawner : MonoBehaviour
                 isActive = true;
             }
         }
-        else if (isActive)
+        else if (isActive || isRightTriggerButtonClicked)
         {
             Destroy(objPreviewinstance);
             objPreviewinstance = null;
             isActive = false;
+            isRightTriggerButtonClicked = false;
         }
     }
     private void EulerSetting()
