@@ -6,37 +6,38 @@ using UnityEngine.InputSystem;
 public class SpawnedObject : MonoBehaviour
 {
     public InputActionReference yawRotation;
-    public InputActionReference pitchRotation;
-
-    [SerializeField] float rotationSpeed = 1;
 
     void Update()
     {
-        EulerSetting();
-        Rotation();
+        if(Test.Instance.spawnedObjectCategory == 1)
+        {
+            EulerSetting();
+        }
+
         Move();
+    }
+
+    private void OnEnable()
+    {
+        yawRotation.action.performed += YawRotation;
+    }
+    private void OnDisable()
+    {
+        yawRotation.action.performed -= YawRotation;
+    }
+
+    public void YawRotation(InputAction.CallbackContext obj)
+    {
+        print("input yaw");
+        transform.Rotate(0, 90, 0);
     }
 
     public void EulerSetting()
     {
         transform.rotation = Quaternion.Euler(Test.Instance.eulerAngle);
     }
-
-    public void Rotation()
-    {
-        if (yawRotation.action.ReadValue<float>() > 0)
-        {
-            transform.Rotate(0, 1 * rotationSpeed, 0);
-        }
-        else if (pitchRotation.action.ReadValue<float>() > 0)
-        {
-            transform.Rotate(1 * rotationSpeed, 0, 0);
-        }
-    }
     public void Move()
     {
         transform.position = Test.Instance.rayPos;
     }
 }
-
-
