@@ -10,6 +10,7 @@ public class ObjectSpawner : MonoBehaviour
     public InputActionReference triggerButtonClick;
     public GameObject selectedObject;
 
+    public Vector3 eulerAngle;
     private void Awake()
     {
         if (Instance == null)
@@ -28,6 +29,6 @@ public class ObjectSpawner : MonoBehaviour
 
     void TriggerButtonClick(InputAction.CallbackContext obj)
     {
-        Instantiate(selectedObject, PreviewSpawner.Instance.rayPos, Quaternion.Euler(PreviewSpawner.Instance.eulerAngle));
+        Instantiate(selectedObject, PreviewSpawner.Instance.rayPos, Quaternion.Euler(eulerAngle));
     }
 }
