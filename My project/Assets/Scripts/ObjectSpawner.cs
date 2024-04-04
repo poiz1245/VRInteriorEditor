@@ -10,8 +10,6 @@ public class ObjectSpawner : MonoBehaviour
     public InputActionReference triggerButtonClick;
     public GameObject selectedObject;
 
-    public bool isRightTriggerButtonClicked;
-
     private void Awake()
     {
         if (Instance == null)
@@ -25,7 +23,6 @@ public class ObjectSpawner : MonoBehaviour
     }
     void Start()
     {
-        isRightTriggerButtonClicked = false;
         triggerButtonClick.action.performed += TriggerButtonClick;
     }
 
