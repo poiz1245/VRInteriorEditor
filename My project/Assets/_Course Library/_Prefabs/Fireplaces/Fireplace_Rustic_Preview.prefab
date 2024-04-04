@@ -257,8 +257,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5694549641522825894}
+  - component: {fileID: -251068972949780761}
   m_Layer: 0
-  m_Name: Fireplace_Rustic
+  m_Name: Fireplace_Rustic_Preview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -284,6 +285,20 @@ Transform:
   - {fileID: 5497464287713181361}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-251068972949780761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4921530691876524060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321cd6bbda4920545b2dc03ca041a57c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yawRotation: {fileID: -566009889006246344, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  pitchRotation: {fileID: 8823071509846622248, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1 &5068453250708692215
 GameObject:
   m_ObjectHideFlags: 0

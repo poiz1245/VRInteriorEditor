@@ -30,7 +30,6 @@ public class PreviewControll : MonoBehaviour
 
     public void YawRotation(InputAction.CallbackContext obj)
     {
-        print("input yaw");
         transform.Rotate(0, 90, 0);
     }
 

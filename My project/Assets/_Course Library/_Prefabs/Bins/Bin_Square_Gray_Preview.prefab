@@ -16,8 +16,9 @@ GameObject:
   - component: {fileID: 2199728079977424933}
   - component: {fileID: 2145917392236830144}
   - component: {fileID: 2292715520885537992}
+  - component: {fileID: -8138076509055650609}
   m_Layer: 0
-  m_Name: Bin_Square_Gray
+  m_Name: Bin_Square_Gray_Preview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -193,3 +194,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2587799, y: 0.38348147, z: 0.016827375}
   m_Center: {x: 0, y: 0.19051267, z: 0.12097627}
+--- !u!114 &-8138076509055650609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8814324382109723249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321cd6bbda4920545b2dc03ca041a57c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yawRotation: {fileID: -566009889006246344, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  pitchRotation: {fileID: 8823071509846622248, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  rotationSpeed: 1

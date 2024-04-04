@@ -10,8 +10,8 @@ public class SelectFloorObject : MonoBehaviour
 
     public void SelectButton()
     {
+        PreviewSpawner.Instance.selectedObjectCategory = 2;
         PreviewSpawner.Instance.objPreviewPrefab = selectedObjectPreview;
         ObjectSpawner.Instance.selectedObject = selectedObject;
-        PreviewSpawner.Instance.selectedObjectCategory = 2;
     }
 }
