@@ -455,6 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   editUI: {fileID: 8304911235239903214}
+  objectPreview: {fileID: 4405413918437472373, guid: 347e63b4d443e254494b15baf90d62eb, type: 3}
 --- !u!1 &6827523706220630508
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,7 +686,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7888942838948115056}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: EditUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
