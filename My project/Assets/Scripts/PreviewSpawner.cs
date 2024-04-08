@@ -10,12 +10,11 @@ public class PreviewSpawner : MonoBehaviour
     public Vector3 rayPos;
     public Vector3 eulerAngle;
     public int selectedObjectCategory;
-
     public GameObject objPreviewPrefab;
     [SerializeField] GameObject objPreviewinstance;
 
     [SerializeField] Transform controllerPos;
-    [SerializeField] bool isActive;
+    public bool isActive {  get; private set; }
 
     int hitLayer;
     LayerMask raycastLayerMask;
