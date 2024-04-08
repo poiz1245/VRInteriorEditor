@@ -43,7 +43,7 @@ public class PreviewSpawner : MonoBehaviour
     {
         LayerMaskSetting();
 
-        if (State.Instance.currentState == State.CurrentState.Build)
+        if (StateManager.Instance.currentState == StateManager.CurrentState.Build)
         {
             Spawn();
         }

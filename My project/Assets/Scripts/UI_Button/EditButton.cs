@@ -6,6 +6,6 @@ public class EditButton : MonoBehaviour
 {
     public void ChangeCurrentState()
     {
-        State.Instance.currentState = State.CurrentState.Edit;
+        StateManager.Instance.currentState = StateManager.CurrentState.Edit;
     }
 }

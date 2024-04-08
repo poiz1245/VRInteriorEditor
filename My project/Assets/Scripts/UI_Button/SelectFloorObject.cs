@@ -12,6 +12,6 @@ public class SelectFloorObject : MonoBehaviour
         PreviewSpawner.Instance.selectedObjectCategory = 2;
         PreviewSpawner.Instance.objPreviewPrefab = selectedObjectPreview;
         ObjectSpawner.Instance.selectedObject = selectedObject;
-        State.Instance.currentState = State.CurrentState.Build;
+        StateManager.Instance.currentState = StateManager.CurrentState.Build;
     }
 }
