@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class State : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public enum CurrentState
     {
-        
+        Normal,
+        Build,
+        Delete
     }
 
-    // Update is called once per frame
+    public CurrentState currentState;
+
+    void Start()
+    {
+        currentState = CurrentState.Normal;
+    }
+
     void Update()
     {
         
