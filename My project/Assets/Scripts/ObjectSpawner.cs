@@ -29,6 +29,9 @@ public class ObjectSpawner : MonoBehaviour
 
     void TriggerButtonClick(InputAction.CallbackContext obj)
     {
-        Instantiate(selectedObject, PreviewSpawner.Instance.rayPos, Quaternion.Euler(eulerAngle));
+        if (PreviewSpawner.Instance.isActive)
+        {
+            Instantiate(selectedObject, PreviewSpawner.Instance.rayPos, Quaternion.Euler(eulerAngle));
+        }
     }
 }
