@@ -10,6 +10,7 @@ public class PreviewSpawner : MonoBehaviour
     public Vector3 rayPos;
     public Vector3 eulerAngle;
     public int selectedObjectCategory;
+
     public GameObject objPreviewPrefab;
     [SerializeField] GameObject objPreviewinstance;
 
@@ -49,7 +50,7 @@ public class PreviewSpawner : MonoBehaviour
         }
         else
         {
-            isActive = false;
+            Despawn();
         }
     }
 
@@ -70,11 +71,17 @@ public class PreviewSpawner : MonoBehaviour
         }
         else if (isActive)
         {
-            Destroy(objPreviewinstance);
-            objPreviewinstance = null;
-            isActive = false;
+            Despawn();
         }
     }
+
+    private void Despawn()
+    {
+        Destroy(objPreviewinstance);
+        objPreviewinstance = null;
+        isActive = false;
+    }
+
     private void LayerMaskSetting()
     {
         if (selectedObjectCategory == 1)
