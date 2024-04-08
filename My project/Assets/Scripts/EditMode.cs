@@ -34,11 +34,14 @@ public class EditMode : MonoBehaviour
 
     public void SelectRelocation()
     {
-
+        transform.rotation = Quaternion.Euler(PreviewSpawner.Instance.eulerAngle); //rotation 세팅
+        transform.position = PreviewSpawner.Instance.rayPos;  //position세팅
     }
 
     public void SelectDelete()
     {
 
     }
+
+
 }

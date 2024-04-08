@@ -36,4 +36,9 @@ public class ObjectSpawner : MonoBehaviour
             stateManager.currentState = State.CurrentState.Normal;
         }
     }
+
+    public void Despawn()
+    {
+        Destroy(gameObject);
+    }
 }
