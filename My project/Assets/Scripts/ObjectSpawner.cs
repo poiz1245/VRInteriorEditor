@@ -8,8 +8,10 @@ public class ObjectSpawner : MonoBehaviour
     public static ObjectSpawner Instance;
 
     public InputActionReference triggerButtonClick;
-    public GameObject selectedObject;
     public Vector3 eulerAngle;
+
+    public GameObject selectedObject;
+    public GameObject objectInstance;
 
     private void Awake()
     {
@@ -31,13 +33,14 @@ public class ObjectSpawner : MonoBehaviour
     {
         if (PreviewSpawner.Instance.isActive)
         {
-            Instantiate(selectedObject, PreviewSpawner.Instance.rayPos, Quaternion.Euler(eulerAngle));
-            State.Instance.currentState = State.CurrentState.Normal;
+            objectInstance = Instantiate(selectedObject, PreviewSpawner.Instance.rayPos, Quaternion.Euler(eulerAngle));
+            StateManager.Instance.currentState = StateManager.CurrentState.Normal;
         }
     }
 
     public void Despawn()
     {
-        Destroy(selectedObject);
+        Destroy(objectInstance);
+        objectInstance = null;
     }
 }
