@@ -12,6 +12,7 @@ public class ObjectSpawner : MonoBehaviour
 
     public GameObject selectedObject;
     public GameObject objectInstance;
+    public GameObject preObjectInstance;
 
     private void Awake()
     {
@@ -33,12 +34,12 @@ public class ObjectSpawner : MonoBehaviour
     {
         if (PreviewSpawner.Instance.isActive)
         {
-            if(StateManager.Instance.currentState == StateManager.CurrentState.Build)
+            if(preObjectInstance == null)
             {
                 objectInstance = Instantiate(selectedObject, PreviewSpawner.Instance.rayPos, Quaternion.Euler(eulerAngle));
                 StateManager.Instance.currentState = StateManager.CurrentState.Normal;
             }
-            else if(StateManager.Instance.currentState == StateManager.CurrentState.Edit)
+            else if(preObjectInstance != null)
             {
                 Respawn();
             }
@@ -48,10 +49,12 @@ public class ObjectSpawner : MonoBehaviour
     public void Despawn()
     {
         objectInstance.SetActive(false);
+        preObjectInstance = objectInstance;
+        objectInstance = null; 
     }
 
     public void Respawn()
     {
-        objectInstance.SetActive(true);
+        preObjectInstance.SetActive(true);
     }
 }
