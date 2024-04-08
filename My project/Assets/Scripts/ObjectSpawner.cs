@@ -33,14 +33,25 @@ public class ObjectSpawner : MonoBehaviour
     {
         if (PreviewSpawner.Instance.isActive)
         {
-            objectInstance = Instantiate(selectedObject, PreviewSpawner.Instance.rayPos, Quaternion.Euler(eulerAngle));
-            StateManager.Instance.currentState = StateManager.CurrentState.Normal;
+            if(StateManager.Instance.currentState == StateManager.CurrentState.Build)
+            {
+                objectInstance = Instantiate(selectedObject, PreviewSpawner.Instance.rayPos, Quaternion.Euler(eulerAngle));
+                StateManager.Instance.currentState = StateManager.CurrentState.Normal;
+            }
+            else if(StateManager.Instance.currentState == StateManager.CurrentState.Edit)
+            {
+                Respawn();
+            }
         }
     }
 
     public void Despawn()
     {
-        Destroy(objectInstance);
-        objectInstance = null;
+        objectInstance.SetActive(false);
+    }
+
+    public void Respawn()
+    {
+        objectInstance.SetActive(true);
     }
 }
