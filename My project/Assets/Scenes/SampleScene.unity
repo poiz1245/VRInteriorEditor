@@ -8066,7 +8066,7 @@ GameObject:
   - component: {fileID: 1899880610}
   - component: {fileID: 1899880611}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8105,7 +8105,6 @@ MonoBehaviour:
   objPreviewPrefab: {fileID: 0}
   objPreviewinstance: {fileID: 0}
   controllerPos: {fileID: 1624604186}
-  isActive: 0
 --- !u!114 &1899880611
 MonoBehaviour:
   m_ObjectHideFlags: 0
