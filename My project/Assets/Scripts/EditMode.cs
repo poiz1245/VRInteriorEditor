@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class EditMode : MonoBehaviour
 {
     [SerializeField] GameObject editUI;
+    [SerializeField] State stateManager;
     int count = 0;
 
     void Start()
@@ -34,8 +35,8 @@ public class EditMode : MonoBehaviour
 
     public void SelectRelocation()
     {
-        transform.rotation = Quaternion.Euler(PreviewSpawner.Instance.eulerAngle); //rotation 세팅
-        transform.position = PreviewSpawner.Instance.rayPos;  //position세팅
+        ObjectSpawner.Instance.Despawn();
+        stateManager.currentState = State.CurrentState.Build;
     }
 
     public void SelectDelete()
