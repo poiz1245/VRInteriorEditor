@@ -8,7 +8,7 @@ public class State : MonoBehaviour
     {
         Normal,
         Build,
-        Delete
+        Edit
     }
 
     public CurrentState currentState;
