@@ -9,8 +9,8 @@ public class ObjectSpawner : MonoBehaviour
 
     public InputActionReference triggerButtonClick;
     public GameObject selectedObject;
-
     public Vector3 eulerAngle;
+
     private void Awake()
     {
         if (Instance == null)
