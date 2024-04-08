@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 public class EditMode : MonoBehaviour
 {
     [SerializeField] GameObject editUI;
-    [SerializeField] State stateManager;
     int count = 0;
 
     void Start()
@@ -36,7 +35,7 @@ public class EditMode : MonoBehaviour
     public void SelectRelocation()
     {
         ObjectSpawner.Instance.Despawn();
-        stateManager.currentState = State.CurrentState.Build;
+        State.Instance.currentState = State.CurrentState.Build;
     }
 
     public void SelectDelete()

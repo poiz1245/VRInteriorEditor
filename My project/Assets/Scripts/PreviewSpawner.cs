@@ -14,7 +14,6 @@ public class PreviewSpawner : MonoBehaviour
     public GameObject objPreviewPrefab;
     [SerializeField] GameObject objPreviewinstance;
 
-    [SerializeField] State stateManager;
     [SerializeField] Transform controllerPos;
     public bool isActive { get; private set; }
 
@@ -44,7 +43,7 @@ public class PreviewSpawner : MonoBehaviour
     {
         LayerMaskSetting();
 
-        if (stateManager.currentState == State.CurrentState.Build)
+        if (State.Instance.currentState == State.CurrentState.Build)
         {
             Spawn();
         }

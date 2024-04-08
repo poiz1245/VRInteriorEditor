@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class EditButton : MonoBehaviour
 {
-    [SerializeField] State stateManager;
     public void ChangeCurrentState()
     {
-        stateManager.currentState = State.CurrentState.Edit;
+        State.Instance.currentState = State.CurrentState.Edit;
     }
 }
