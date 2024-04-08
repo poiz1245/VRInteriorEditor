@@ -8182,6 +8182,7 @@ MonoBehaviour:
   triggerButtonClick: {fileID: 8673673831185149952, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   selectedObject: {fileID: 0}
   eulerAngle: {x: 0, y: 0, z: 0}
+  stateManager: {fileID: 571056482}
 --- !u!1 &1924374727
 GameObject:
   m_ObjectHideFlags: 0

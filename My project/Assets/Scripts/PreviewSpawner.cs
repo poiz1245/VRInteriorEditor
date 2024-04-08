@@ -47,6 +47,10 @@ public class PreviewSpawner : MonoBehaviour
         {
             Spawn();
         }
+        else
+        {
+            isActive = false;
+        }
     }
 
 
