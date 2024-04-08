@@ -1,21 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class EditMode : MonoBehaviour
 {
-    public InputActionReference triggerButtonClick;
+    [SerializeField] GameObject editUI;
+    int count = 0;
+
     void Start()
     {
-        triggerButtonClick.action.performed += TriggerButtonClick;
     }
 
-    void TriggerButtonClick(InputAction.CallbackContext obj)
+    private void Update()
     {
-        if (PreviewSpawner.Instance.isActive)
-        {
 
+    }
+
+    public void EditUIActivation()
+    {
+        if (count == 0)
+        {
+            editUI.SetActive(true);
+            count++;
         }
+        else
+        {
+            editUI.SetActive(false);
+            count--;
+        }
+    }
+
+    public void SelectRelocation()
+    {
+
+    }
+
+    public void SelectDelete()
+    {
+
     }
 }
