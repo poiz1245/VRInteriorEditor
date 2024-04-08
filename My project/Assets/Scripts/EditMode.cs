@@ -23,11 +23,13 @@ public class EditMode : MonoBehaviour
         if (count == 0)
         {
             editUI.SetActive(true);
+            ObjectSpawner.Instance.objectInstance = gameObject;
             count++;
         }
         else
         {
             editUI.SetActive(false);
+            ObjectSpawner.Instance.objectInstance = null;
             count--;
         }
     }
@@ -35,7 +37,7 @@ public class EditMode : MonoBehaviour
     public void SelectRelocation()
     {
         ObjectSpawner.Instance.Despawn();
-        State.Instance.currentState = State.CurrentState.Build;
+        StateManager.Instance.currentState = StateManager.CurrentState.Build;
     }
 
     public void SelectDelete()
