@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class EditMode : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public InputActionReference triggerButtonClick;
     void Start()
     {
-        
+        triggerButtonClick.action.performed += TriggerButtonClick;
     }
 
-    // Update is called once per frame
-    void Update()
+    void TriggerButtonClick(InputAction.CallbackContext obj)
     {
-        
+        if (PreviewSpawner.Instance.isActive)
+        {
+
+        }
     }
 }
