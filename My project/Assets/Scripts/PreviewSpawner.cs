@@ -13,8 +13,9 @@ public class PreviewSpawner : MonoBehaviour
     public GameObject objPreviewPrefab;
     [SerializeField] GameObject objPreviewinstance;
 
+    [SerializeField] State stateManager;
     [SerializeField] Transform controllerPos;
-    public bool isActive {  get; private set; }
+    public bool isActive { get; private set; }
 
     int hitLayer;
     LayerMask raycastLayerMask;
@@ -41,20 +42,13 @@ public class PreviewSpawner : MonoBehaviour
     private void Update()
     {
         LayerMaskSetting();
-        Spawn();
+
+        if (stateManager.currentState == State.CurrentState.Build)
+        {
+            Spawn();
+        }
     }
 
-    private void LayerMaskSetting()
-    {
-        if (selectedObjectCategory == 1)
-        {
-            raycastLayerMask = (1 << 8) | (1 << 9) | (1 << 10);
-        }
-        else if (selectedObjectCategory == 2)
-        {
-            raycastLayerMask = (1 << 7);
-        }
-    }
 
     public void Spawn()
     {
@@ -75,6 +69,17 @@ public class PreviewSpawner : MonoBehaviour
             Destroy(objPreviewinstance);
             objPreviewinstance = null;
             isActive = false;
+        }
+    }
+    private void LayerMaskSetting()
+    {
+        if (selectedObjectCategory == 1)
+        {
+            raycastLayerMask = (1 << 8) | (1 << 9) | (1 << 10);
+        }
+        else if (selectedObjectCategory == 2)
+        {
+            raycastLayerMask = (1 << 7);
         }
     }
     private void EulerSetting()
