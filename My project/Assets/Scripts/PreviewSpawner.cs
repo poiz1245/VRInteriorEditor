@@ -54,7 +54,6 @@ public class PreviewSpawner : MonoBehaviour
         }
     }
 
-
     public void Spawn()
     {
         if (Physics.Raycast(controllerPos.position, controllerPos.forward, out hitInfo, 10f, raycastLayerMask))
