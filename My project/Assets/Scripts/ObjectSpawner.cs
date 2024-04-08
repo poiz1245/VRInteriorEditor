@@ -38,6 +38,6 @@ public class ObjectSpawner : MonoBehaviour
 
     public void Despawn()
     {
-        Destroy(gameObject);
+        Destroy(selectedObject);
     }
 }
