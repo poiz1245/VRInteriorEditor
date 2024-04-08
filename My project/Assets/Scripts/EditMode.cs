@@ -7,37 +7,36 @@ using UnityEngine.InputSystem;
 public class EditMode : MonoBehaviour
 {
     [SerializeField] GameObject editUI;
+    [SerializeField] GameObject objectPreview;
     int count = 0;
-
-    void Start()
-    {
-    }
-
-    private void Update()
-    {
-
-    }
 
     public void EditUIActivation()
     {
-        if (count == 0)
+        if (StateManager.Instance.currentState == StateManager.CurrentState.Edit)
         {
-            editUI.SetActive(true);
-            ObjectSpawner.Instance.objectInstance = gameObject;
-            count++;
-        }
-        else
-        {
-            editUI.SetActive(false);
-            ObjectSpawner.Instance.objectInstance = null;
-            count--;
+            if (count == 0)
+            {
+                editUI.SetActive(true);
+                ObjectSpawner.Instance.objectInstance = gameObject;
+                count++;
+            }
+            else
+            {
+                editUI.SetActive(false);
+                ObjectSpawner.Instance.objectInstance = null;
+                count--;
+            }
         }
     }
 
     public void SelectRelocation()
     {
-        ObjectSpawner.Instance.Despawn();
-        StateManager.Instance.currentState = StateManager.CurrentState.Build;
+        if (StateManager.Instance.currentState == StateManager.CurrentState.Edit)
+        {
+            ObjectSpawner.Instance.Despawn();
+            PreviewSpawner.Instance.objPreviewPrefab = objectPreview;
+            StateManager.Instance.currentState = StateManager.CurrentState.Build;
+        }
     }
 
     public void SelectDelete()
