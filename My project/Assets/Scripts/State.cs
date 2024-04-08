@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class State : MonoBehaviour
 {
+    public static State Instance;
+
     public enum CurrentState
     {
         Normal,
@@ -12,6 +14,18 @@ public class State : MonoBehaviour
     }
 
     public CurrentState currentState;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
