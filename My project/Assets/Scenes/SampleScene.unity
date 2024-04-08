@@ -577,6 +577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 8121423280065225767, guid: 25d93e6e74b820e40b90c19ae6b9ccbc, type: 3}
   selectedObject: {fileID: 8121423280065225767, guid: f53b75d63a0f12e4f9207b643d400e0c, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!114 &114312012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,6 +820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 8632904273779812527, guid: 4f63b38313cdb8842a2943dcfd8aaa65, type: 3}
   selectedObject: {fileID: 8632904273779812527, guid: 058f9e06dbcfdea45bbef5faa545c076, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!1 &149811268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,6 +1124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 843102023182037735, guid: db5d817f798d5094d8ab3b8853775a9c, type: 3}
   selectedObject: {fileID: 843102023182037735, guid: 7ddd5c018cc2acd4094172e843dc019b, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!114 &217517597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1230,6 +1233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 843102023182037735, guid: db5d817f798d5094d8ab3b8853775a9c, type: 3}
   selectedObject: {fileID: 843102023182037735, guid: 7ddd5c018cc2acd4094172e843dc019b, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!1 &222973519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1976,6 +1980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 639676852691503351, guid: fedb7f8877958a6439569056db24ebdb, type: 3}
   selectedObject: {fileID: 639676852691503351, guid: dbe7b9e1570050841a8f1d6f3ee2629f, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!114 &226629541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2629,6 +2634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 4921530691876524060, guid: ec9493a4df8f53c41b6767909fca1b5e, type: 3}
   selectedObject: {fileID: 4921530691876524060, guid: 9613f127c4654fd4ca17526faa6e34bb, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!114 &370856645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2758,9 +2764,9 @@ RectTransform:
   - {fileID: 198722221}
   m_Father: {fileID: 563892994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 146.11176, y: -158.50002}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 283.85, y: 46.81}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &400860256
@@ -3675,6 +3681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 8814324382109723249, guid: 9658d543e03de66499c080c1768ffd94, type: 3}
   selectedObject: {fileID: 8814324382109723249, guid: 0fee49bb1b67cbb4ab05a192352fd7c9, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!114 &603131940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3888,6 +3895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 7468476488619290497, guid: 1872ef75c8521a841be99c0927d38aa8, type: 3}
   selectedObject: {fileID: 7468476488619290497, guid: aacffe4a73d9b934ea85092756f457ab, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!114 &615347557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4096,9 +4104,9 @@ RectTransform:
   - {fileID: 1379436362}
   m_Father: {fileID: 563892994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 146.11176, y: -107.00001}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 283.85, y: 46.81}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &653795729
@@ -4243,9 +4251,9 @@ RectTransform:
   - {fileID: 642894762}
   m_Father: {fileID: 563892994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 146.11176, y: -4}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 283.85, y: 46.81}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &662844911
@@ -4873,6 +4881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 5495510149201365389, guid: 42c5532fe23975a4b89f04ffa3e16809, type: 3}
   selectedObject: {fileID: 5495510149201365389, guid: 8b55f4b13da640a458a5a4336c489584, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!1 &900211906
 GameObject:
   m_ObjectHideFlags: 0
@@ -5185,6 +5194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 4049584793189637479, guid: faa523f190124f84192491aff17ff984, type: 3}
   selectedObject: {fileID: 4049584793189637479, guid: 7b844f6cdc7f1ce4fba989b2d7db9659, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!1 &1058747895
 GameObject:
   m_ObjectHideFlags: 0
@@ -5412,6 +5422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 2434575264971560700, guid: 552a7db991bdb9347aeddf9920a4d03f, type: 3}
   selectedObject: {fileID: 2434575264971560700, guid: a3e93e0121486e340ac0796260e744ab, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!1 &1147385695
 GameObject:
   m_ObjectHideFlags: 0
@@ -5713,6 +5724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 6982308244807511748, guid: 94de90bdfa8abef4b9180c742daeae03, type: 3}
   selectedObject: {fileID: 6982308244807511748, guid: deb9c7803f41d864c8272ceb6ff2d290, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!114 &1157344953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6089,6 +6101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 7700428340173215443, guid: 33481d81c11111047960699e4193e1e0, type: 3}
   selectedObject: {fileID: 7700428340173215443, guid: 9c50d789c0c63e14f8e1f1447e1132bc, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!114 &1317874909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6197,6 +6210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 7700428340173215443, guid: 33481d81c11111047960699e4193e1e0, type: 3}
   selectedObject: {fileID: 7700428340173215443, guid: 9c50d789c0c63e14f8e1f1447e1132bc, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!4 &1351978692 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 992558480225725475, guid: d9470993b9bd0a541a884d6f6704a421, type: 3}
@@ -6429,6 +6443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 780567771317026041, guid: 66495b2f9091c7f4e9bfa1f6c54d1cf2, type: 3}
   selectedObject: {fileID: 780567771317026041, guid: 1ce821d9e7282cd498277a5e5cf36f05, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!1 &1411306195
 GameObject:
   m_ObjectHideFlags: 0
@@ -7808,6 +7823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 436950025568814515, guid: 3cf23d123e5311c41a9a2c98ec51a004, type: 3}
   selectedObject: {fileID: 436950025568814515, guid: f654ef212370c2948b593977bd733164, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!114 &1763981032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8149,6 +8165,7 @@ MonoBehaviour:
   selectedObjectCategory: 0
   objPreviewPrefab: {fileID: 0}
   objPreviewinstance: {fileID: 0}
+  stateManager: {fileID: 571056482}
   controllerPos: {fileID: 1624604186}
 --- !u!114 &1899880611
 MonoBehaviour:
@@ -8200,9 +8217,9 @@ RectTransform:
   - {fileID: 1519491275}
   m_Father: {fileID: 563892994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 146.11176, y: -55.500004}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 283.85, y: 46.81}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1924374729
@@ -8586,6 +8603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 4405413918437472373, guid: 347e63b4d443e254494b15baf90d62eb, type: 3}
   selectedObject: {fileID: 4405413918437472373, guid: 2cdc705002a6a784580137dd120e64e7, type: 3}
+  stateManager: {fileID: 571056482}
 --- !u!1 &2081411137
 GameObject:
   m_ObjectHideFlags: 0

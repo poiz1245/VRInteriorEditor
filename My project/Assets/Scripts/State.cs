@@ -17,9 +17,4 @@ public class State : MonoBehaviour
     {
         currentState = CurrentState.Normal;
     }
-
-    void Update()
-    {
-        
-    }
 }

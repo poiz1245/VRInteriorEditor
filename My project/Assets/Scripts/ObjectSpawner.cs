@@ -11,6 +11,7 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject selectedObject;
     public Vector3 eulerAngle;
 
+    [SerializeField] State stateManager;
     private void Awake()
     {
         if (Instance == null)
@@ -32,6 +33,7 @@ public class ObjectSpawner : MonoBehaviour
         if (PreviewSpawner.Instance.isActive)
         {
             Instantiate(selectedObject, PreviewSpawner.Instance.rayPos, Quaternion.Euler(eulerAngle));
+            stateManager.currentState = State.CurrentState.Normal;
         }
     }
 }
