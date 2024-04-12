@@ -20,6 +20,8 @@ public class ObjectPool : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        Initialize();
     }
 
     private void Initialize()
@@ -59,6 +61,7 @@ public class ObjectPool : MonoBehaviour
 
     public static void ReturnObject(PreviewControll obj)
     {
+        print("aaa");
         obj.gameObject.SetActive(false);
         obj.transform.SetParent(Instance.transform);
         Instance.previewObjectQueue.Enqueue(obj);
