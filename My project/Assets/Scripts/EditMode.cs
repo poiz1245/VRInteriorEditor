@@ -34,6 +34,7 @@ public class EditMode : MonoBehaviour
         if (StateManager.Instance.currentState == StateManager.CurrentState.Edit)
         {
             ObjectSpawner.Instance.Despawn();
+            editUI.SetActive(false);
             StateManager.Instance.currentState = StateManager.CurrentState.Build;
         }
     }
