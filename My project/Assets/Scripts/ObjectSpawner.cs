@@ -7,12 +7,10 @@ public class ObjectSpawner : MonoBehaviour
 {
     public static ObjectSpawner Instance;
 
-    public InputActionReference triggerButtonClick;
-    public Vector3 eulerAngle;
-
-    public GameObject selectedObject;
+    [SerializeField] InputActionReference triggerButtonClick;
     public GameObject objectInstance;
-    public GameObject preObjectInstance;
+
+    public Vector3 eulerAngle { get; set; }
 
     private void Awake()
     {

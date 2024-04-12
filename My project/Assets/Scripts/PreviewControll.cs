@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PreviewControll : MonoBehaviour
 {
-    public InputActionReference yawRotation;
+    [SerializeField] InputActionReference yawRotation;
 
     void Update()
     {

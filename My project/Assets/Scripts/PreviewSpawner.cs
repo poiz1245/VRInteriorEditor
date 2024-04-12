@@ -7,8 +7,6 @@ public class PreviewSpawner : MonoBehaviour
 {
     public static PreviewSpawner Instance;
 
-    public Vector3 rayPos;
-    public Vector3 eulerAngle;
     public int selectedObjectCategory;
     public int objectNumber;
 
@@ -16,6 +14,9 @@ public class PreviewSpawner : MonoBehaviour
     [SerializeField] Transform controllerPos;
 
     public bool isActive { get; private set; }
+    public Vector3 eulerAngle { get; private set; }
+    public Vector3 rayPos { get; private set; }
+
 
     int hitLayer;
     LayerMask raycastLayerMask;
