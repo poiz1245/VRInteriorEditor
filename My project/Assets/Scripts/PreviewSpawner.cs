@@ -37,6 +37,7 @@ public class PreviewSpawner : MonoBehaviour
     private void Start()
     {
         isActive = false;
+        objPreviewinstance = null;
     }
 
     private void Update()
@@ -46,6 +47,10 @@ public class PreviewSpawner : MonoBehaviour
         if (StateManager.Instance.currentState == StateManager.CurrentState.Build)
         {
             Spawn();
+        }
+        else
+        {
+            Despawn();
         }
     }
 
@@ -71,8 +76,11 @@ public class PreviewSpawner : MonoBehaviour
 
     public void Despawn()
     {
-        objPreviewinstance.SetActive(false);
-        isActive = false;
+        if (objPreviewinstance != null)
+        {
+            objPreviewinstance.SetActive(false);
+            isActive = false;
+        }
     }
 
     private void LayerMaskSetting()
