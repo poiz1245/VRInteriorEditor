@@ -33,8 +33,6 @@ public class EditMode : MonoBehaviour
     {
         if (StateManager.Instance.currentState == StateManager.CurrentState.Edit)
         {
-            /*ObjectSpawner.Instance.Despawn();
-            PreviewSpawner.Instance.objPreviewPrefab = objectPreview;*/
             PreviewSpawner.Instance.Despawn();
             StateManager.Instance.currentState = StateManager.CurrentState.Build;
         }

@@ -11,8 +11,6 @@ public class SelectWallObject : MonoBehaviour
     {
         PreviewSpawner.Instance.selectedObjectCategory = 1;
         PreviewSpawner.Instance.objectNumber = objectNumber;
-        /*PreviewSpawner.Instance.objPreviewPrefab = selectedObjectPreview;
-        ObjectSpawner.Instance.selectedObject = selectedObject;*/
         StateManager.Instance.currentState = StateManager.CurrentState.Build;
     }
 }

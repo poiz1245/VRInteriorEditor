@@ -10,8 +10,7 @@ public class SelectFloorObject : MonoBehaviour
     public void SelectButton()
     {
         PreviewSpawner.Instance.selectedObjectCategory = 2;
-        /*PreviewSpawner.Instance.objPreviewPrefab = selectedObjectPreview;
-        ObjectSpawner.Instance.selectedObject = selectedObject;*/
+        PreviewSpawner.Instance.objectNumber = objectNumber;
         StateManager.Instance.currentState = StateManager.CurrentState.Build;
     }
 }
