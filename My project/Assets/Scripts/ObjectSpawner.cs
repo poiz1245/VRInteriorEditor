@@ -32,7 +32,7 @@ public class ObjectSpawner : MonoBehaviour
 
     void TriggerButtonClick(InputAction.CallbackContext obj)
     {
-        if (PreviewSpawner.Instance.isActive)
+        if (PreviewSpawner.Instance.isActive && StateManager.Instance.currentState == StateManager.CurrentState.Build)
         {
             StateManager.Instance.currentState = StateManager.CurrentState.Normal;
             objectInstance = ObjectPool.GetObject(PreviewSpawner.Instance.objectNumber);
