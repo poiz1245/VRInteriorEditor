@@ -45,11 +45,22 @@ public class PreviewSpawner : MonoBehaviour
     {
         LayerMaskSetting();
 
-        if (StateManager.Instance.currentState == StateManager.CurrentState.Build)
+        if (Physics.Raycast(controllerPos.position, controllerPos.forward, out hitInfo, 10f, raycastLayerMask))
         {
-            Spawn();
+            hitLayer = hitInfo.collider.gameObject.layer;
+            rayPos = hitInfo.point;
+            EulerSetting();
+
+            if (StateManager.Instance.currentState == StateManager.CurrentState.Build)
+            {
+                Spawn();
+            }
+            else if(StateManager.Instance.currentState != StateManager.CurrentState.Edit)
+            {
+                Despawn(); //계속해서 설치되는걸 막기 위해서 있어야함
+            }
         }
-        else
+        else if (isActive)
         {
             Despawn();
         }
@@ -57,21 +68,10 @@ public class PreviewSpawner : MonoBehaviour
 
     public void Spawn()
     {
-        if (Physics.Raycast(controllerPos.position, controllerPos.forward, out hitInfo, 10f, raycastLayerMask))
+        if (!isActive)
         {
-            hitLayer = hitInfo.collider.gameObject.layer;
-            EulerSetting();
-            rayPos = hitInfo.point;
-
-            if (!isActive)
-            {
-                objPreviewinstance = PreviewObjectPool.GetPreviewObject(objectID);
-                isActive = true;
-            }
-        }
-        else if (isActive)
-        {
-            Despawn();
+            objPreviewinstance = PreviewObjectPool.GetPreviewObject(objectID);
+            isActive = true;
         }
     }
 

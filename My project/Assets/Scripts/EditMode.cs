@@ -39,7 +39,7 @@ public class EditMode : MonoBehaviour
             gameObject.SetActive(false);
 
             PreviewSpawner.Instance.objectID = myObjectID;
-            PreviewSpawner.Instance.Spawn();
+            StateManager.Instance.currentState = StateManager.CurrentState.Build;
         }
     }
 
