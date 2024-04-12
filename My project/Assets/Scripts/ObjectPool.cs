@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
     public static ObjectPool Instance;
 
-    [SerializeField] GameObject[] poolingObjectPrefab;
+    [SerializeField] GameObject[] objectPrefab;
 
-    Queue<PreviewControll> previewObjectQueue = new Queue<PreviewControll>();
+    List<GameObject>[] pool;
+
+    public int objectNumber;
 
     private void Awake()
     {
@@ -26,23 +29,44 @@ public class ObjectPool : MonoBehaviour
 
     private void Initialize()
     {
-        for(int i = 0; i < poolingObjectPrefab.Length; i++)
+        pool = new List<GameObject>[objectPrefab.Length];
+
+        for (int i = 0; i < pool.Length; i++)
         {
-            previewObjectQueue.Enqueue(CreateNewObject(i));
+            pool[i] = new List<GameObject>();
         }
     }
 
-    private PreviewControll CreateNewObject(int a)
+   /* private PreviewControll CreateNewObject()
     {
-        PreviewControll newObject = Instantiate(poolingObjectPrefab[a]).GetComponent<PreviewControll>();
+        PreviewControll newObject = Instantiate(poolingObjectPrefab[objectNumber]).GetComponent<PreviewControll>();
         newObject.gameObject.SetActive(false);
         newObject.transform.SetParent(transform);
         return newObject;
-    }
+    }*/
 
-    public static PreviewControll GetObject()
+    public static GameObject GetObject(int index)
     {
-        if(Instance.previewObjectQueue.Count > 0)
+        GameObject select = null;
+
+        foreach(GameObject obj in Instance.pool[index])
+        {
+            if (!obj.activeSelf)
+            {
+                select = obj;
+                select.SetActive(true);
+                break;
+            }
+        }
+
+        if (!select)
+        {
+            select = Instantiate(Instance.objectPrefab[index], Instance.transform);
+            Instance.pool[index].Add(select);
+        }
+
+        return select;
+        /*if(Instance.previewObjectQueue.Count > 0)
         {
             PreviewControll obj = Instance.previewObjectQueue.Dequeue();
             obj.transform.SetParent(null);
@@ -51,18 +75,17 @@ public class ObjectPool : MonoBehaviour
         }
         else
         {
-            PreviewControll newObject = Instance.CreateNewObject(0);
+            PreviewControll newObject = Instance.CreateNewObject();
             newObject.transform.SetParent(null);
             newObject.gameObject.SetActive(true);
             return newObject;
-
-        }
+        }*/
     }
 
-    public static void ReturnObject(PreviewControll obj)
+    /*public static void ReturnObject(PreviewControll obj)
     {
         obj.gameObject.SetActive(false);
         obj.transform.SetParent(Instance.transform);
         Instance.previewObjectQueue.Enqueue(obj);
-    }
+    }*/
 }
