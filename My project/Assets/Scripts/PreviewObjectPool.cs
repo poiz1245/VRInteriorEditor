@@ -13,8 +13,6 @@ public class PreviewObjectPool : MonoBehaviour
 
     List<GameObject>[] previewObjectPool;
 
-    public int objectID;
-
     private void Awake()
     {
         if (Instance == null)

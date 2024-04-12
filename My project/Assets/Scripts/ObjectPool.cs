@@ -10,8 +10,6 @@ public class ObjectPool : MonoBehaviour
 
     List<GameObject>[] objectPool;
 
-    public int objectID;
-
     private void Awake()
     {
         if (Instance == null)
