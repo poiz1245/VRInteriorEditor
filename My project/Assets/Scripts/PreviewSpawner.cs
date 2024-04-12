@@ -8,7 +8,7 @@ public class PreviewSpawner : MonoBehaviour
     public static PreviewSpawner Instance;
 
     public int selectedObjectCategory;
-    public int objectNumber;
+    public int objectID;
 
     [SerializeField] GameObject objPreviewinstance;
     [SerializeField] Transform controllerPos;
@@ -65,7 +65,7 @@ public class PreviewSpawner : MonoBehaviour
 
             if (!isActive)
             {
-                objPreviewinstance = PreviewObjectPool.GetPreviewObject(objectNumber);
+                objPreviewinstance = PreviewObjectPool.GetPreviewObject(objectID);
                 isActive = true;
             }
         }

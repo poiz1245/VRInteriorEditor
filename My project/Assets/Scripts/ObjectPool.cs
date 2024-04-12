@@ -10,7 +10,7 @@ public class ObjectPool : MonoBehaviour
 
     List<GameObject>[] objectPool;
 
-    public int objectNumber;
+    public int objectID;
 
     private void Awake()
     {

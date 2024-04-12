@@ -33,7 +33,7 @@ public class ObjectSpawner : MonoBehaviour
         if (PreviewSpawner.Instance.isActive && StateManager.Instance.currentState == StateManager.CurrentState.Build)
         {
             StateManager.Instance.currentState = StateManager.CurrentState.Normal;
-            objectInstance = ObjectPool.GetObject(PreviewSpawner.Instance.objectNumber);
+            objectInstance = ObjectPool.GetObject(PreviewSpawner.Instance.objectID);
             objectInstance.transform.position = PreviewSpawner.Instance.rayPos;
             objectInstance.transform.rotation = Quaternion.Euler(eulerAngle);
         }
