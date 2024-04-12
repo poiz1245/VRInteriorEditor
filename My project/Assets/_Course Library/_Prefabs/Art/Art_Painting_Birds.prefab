@@ -456,6 +456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   editUI: {fileID: 8304911235239903214}
   objectPreview: {fileID: 4405413918437472373, guid: 347e63b4d443e254494b15baf90d62eb, type: 3}
+  myObjectID: 0
 --- !u!1 &6827523706220630508
 GameObject:
   m_ObjectHideFlags: 0
