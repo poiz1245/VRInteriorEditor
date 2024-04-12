@@ -30,12 +30,19 @@ public class ObjectSpawner : MonoBehaviour
 
     void TriggerButtonClick(InputAction.CallbackContext obj)
     {
-        if (PreviewSpawner.Instance.isActive && StateManager.Instance.currentState == StateManager.CurrentState.Build)
+        if (PreviewSpawner.Instance.isActive && 
+            (StateManager.Instance.currentState == StateManager.CurrentState.Build || 
+            StateManager.Instance.currentState == StateManager.CurrentState.Edit))
         {
-            StateManager.Instance.currentState = StateManager.CurrentState.Normal;
+            if (StateManager.Instance.currentState == StateManager.CurrentState.Build)
+            {
+                StateManager.Instance.currentState = StateManager.CurrentState.Normal;
+            }
+
             objectInstance = ObjectPool.GetObject(PreviewSpawner.Instance.objectID);
             objectInstance.transform.position = PreviewSpawner.Instance.rayPos;
             objectInstance.transform.rotation = Quaternion.Euler(eulerAngle);
+            PreviewSpawner.Instance.Despawn();
         }
     }
 
