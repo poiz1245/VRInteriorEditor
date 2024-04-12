@@ -43,6 +43,6 @@ public class ObjectSpawner : MonoBehaviour
 
     public void Despawn()
     {
-        ObjectPool.ReturnObject(objectInstance);
+        objectInstance.SetActive(false);
     }
 }

@@ -12,8 +12,6 @@ public class PreviewSpawner : MonoBehaviour
     public int selectedObjectCategory;
     public int objectNumber;
 
-    //public GameObject objPreviewPrefab;
-    //[SerializeField] GameObject objPreviewinstance;
     [SerializeField] GameObject objPreviewinstance;
     [SerializeField] Transform controllerPos;
 
@@ -73,7 +71,7 @@ public class PreviewSpawner : MonoBehaviour
 
     public void Despawn()
     {
-        PreviewObjectPool.ReturnPreviewObject(objPreviewinstance);
+        objPreviewinstance.SetActive(false);
         isActive = false;
     }
 

@@ -58,10 +58,4 @@ public class ObjectPool : MonoBehaviour
 
         return select;
     }
-
-    public static void ReturnObject(GameObject obj)
-    {
-        obj.gameObject.SetActive(false);
-        //Instance.previewObjectQueue.Enqueue(obj);
-    }
 }

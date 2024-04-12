@@ -61,10 +61,4 @@ public class PreviewObjectPool : MonoBehaviour
 
         return select;
     }
-
-    public static void ReturnPreviewObject(GameObject obj)
-    {
-        obj.gameObject.SetActive(false);
-        //Instance.previewObjectQueue.Enqueue(obj);
-    }
 }
