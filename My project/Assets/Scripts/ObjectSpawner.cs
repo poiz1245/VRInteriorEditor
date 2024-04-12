@@ -34,7 +34,8 @@ public class ObjectSpawner : MonoBehaviour
     {
         if (PreviewSpawner.Instance.isActive)
         {
-            if(preObjectInstance == null)
+            StateManager.Instance.currentState = StateManager.CurrentState.Normal;
+            /*if(preObjectInstance == null)
             {
                 objectInstance = Instantiate(selectedObject, PreviewSpawner.Instance.rayPos, Quaternion.Euler(eulerAngle));
                 StateManager.Instance.currentState = StateManager.CurrentState.Normal;
@@ -42,7 +43,7 @@ public class ObjectSpawner : MonoBehaviour
             else if(preObjectInstance != null)
             {
                 Respawn();
-            }
+            }*/
         }
     }
 
