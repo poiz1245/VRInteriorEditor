@@ -2,15 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class ObjectPool : MonoBehaviour
+public class PreviewObjectPool : MonoBehaviour
 {
-    public static ObjectPool Instance;
+    public static PreviewObjectPool Instance;
 
-    [SerializeField] GameObject[] objectPrefab;
+    [SerializeField] GameObject[] previewObjectPrefab;
 
-    List<GameObject>[] pool;
+    List<GameObject>[] previewObjectPool;
 
     public int objectNumber;
 
@@ -30,19 +31,19 @@ public class ObjectPool : MonoBehaviour
 
     private void Initialize()
     {
-        pool = new List<GameObject>[objectPrefab.Length];
+        previewObjectPool = new List<GameObject>[previewObjectPrefab.Length];
 
-        for (int i = 0; i < pool.Length; i++)
+        for (int i = 0; i < previewObjectPool.Length; i++)
         {
-            pool[i] = new List<GameObject>();
+            previewObjectPool[i] = new List<GameObject>();
         }
     }
 
-    public static GameObject GetObject(int index)
+    public static GameObject GetPreviewObject(int index)
     {
         GameObject select = null;
 
-        foreach(GameObject obj in Instance.pool[index])
+        foreach(GameObject obj in Instance.previewObjectPool[index])
         {
             if (!obj.activeSelf)
             {
@@ -54,17 +55,16 @@ public class ObjectPool : MonoBehaviour
 
         if (!select)
         {
-            select = Instantiate(Instance.objectPrefab[index], Instance.transform);
-            Instance.pool[index].Add(select);
+            select = Instantiate(Instance.previewObjectPrefab[index], Instance.transform);
+            Instance.previewObjectPool[index].Add(select);
         }
 
         return select;
     }
 
-    public static void ReturnObject(GameObject obj)
+    public static void ReturnPreviewObject(GameObject obj)
     {
         obj.gameObject.SetActive(false);
-        obj.transform.SetParent(Instance.transform);
         //Instance.previewObjectQueue.Enqueue(obj);
     }
 }

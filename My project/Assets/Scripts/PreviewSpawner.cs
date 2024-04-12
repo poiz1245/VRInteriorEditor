@@ -12,11 +12,11 @@ public class PreviewSpawner : MonoBehaviour
     public int selectedObjectCategory;
     public int objectNumber;
 
-    public GameObject objPreviewPrefab;
+    //public GameObject objPreviewPrefab;
     //[SerializeField] GameObject objPreviewinstance;
     [SerializeField] GameObject objPreviewinstance;
-
     [SerializeField] Transform controllerPos;
+
     public bool isActive { get; private set; }
 
     int hitLayer;
@@ -60,7 +60,7 @@ public class PreviewSpawner : MonoBehaviour
             rayPos = hitInfo.point;
             if (!isActive)
             {
-                objPreviewinstance = ObjectPool.GetObject(objectNumber);
+                objPreviewinstance = PreviewObjectPool.GetPreviewObject(objectNumber);
                 isActive = true;
             }
         }
@@ -72,7 +72,7 @@ public class PreviewSpawner : MonoBehaviour
 
     public void Despawn()
     {
-        ObjectPool.ReturnObject(objPreviewinstance);
+        PreviewObjectPool.ReturnPreviewObject(objPreviewinstance);
         isActive = false;
     }
 
