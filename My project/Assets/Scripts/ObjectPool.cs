@@ -28,13 +28,13 @@ public class ObjectPool : MonoBehaviour
     {
         for(int i = 0; i < poolingObjectPrefab.Length; i++)
         {
-            previewObjectQueue.Enqueue(CreateNewObject());
+            previewObjectQueue.Enqueue(CreateNewObject(i));
         }
     }
 
-    private PreviewControll CreateNewObject()
+    private PreviewControll CreateNewObject(int a)
     {
-        PreviewControll newObject = Instantiate(poolingObjectPrefab[0]).GetComponent<PreviewControll>();
+        PreviewControll newObject = Instantiate(poolingObjectPrefab[a]).GetComponent<PreviewControll>();
         newObject.gameObject.SetActive(false);
         newObject.transform.SetParent(transform);
         return newObject;
@@ -51,7 +51,7 @@ public class ObjectPool : MonoBehaviour
         }
         else
         {
-            PreviewControll newObject = Instance.CreateNewObject();
+            PreviewControll newObject = Instance.CreateNewObject(0);
             newObject.transform.SetParent(null);
             newObject.gameObject.SetActive(true);
             return newObject;
@@ -61,7 +61,6 @@ public class ObjectPool : MonoBehaviour
 
     public static void ReturnObject(PreviewControll obj)
     {
-        print("aaa");
         obj.gameObject.SetActive(false);
         obj.transform.SetParent(Instance.transform);
         Instance.previewObjectQueue.Enqueue(obj);
