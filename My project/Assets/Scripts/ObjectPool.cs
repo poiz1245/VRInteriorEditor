@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
@@ -37,14 +38,6 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
-   /* private PreviewControll CreateNewObject()
-    {
-        PreviewControll newObject = Instantiate(poolingObjectPrefab[objectNumber]).GetComponent<PreviewControll>();
-        newObject.gameObject.SetActive(false);
-        newObject.transform.SetParent(transform);
-        return newObject;
-    }*/
-
     public static GameObject GetObject(int index)
     {
         GameObject select = null;
@@ -66,26 +59,12 @@ public class ObjectPool : MonoBehaviour
         }
 
         return select;
-        /*if(Instance.previewObjectQueue.Count > 0)
-        {
-            PreviewControll obj = Instance.previewObjectQueue.Dequeue();
-            obj.transform.SetParent(null);
-            obj.gameObject.SetActive(true);
-            return obj;
-        }
-        else
-        {
-            PreviewControll newObject = Instance.CreateNewObject();
-            newObject.transform.SetParent(null);
-            newObject.gameObject.SetActive(true);
-            return newObject;
-        }*/
     }
 
-    /*public static void ReturnObject(PreviewControll obj)
+    public static void ReturnObject(GameObject obj)
     {
         obj.gameObject.SetActive(false);
         obj.transform.SetParent(Instance.transform);
-        Instance.previewObjectQueue.Enqueue(obj);
-    }*/
+        //Instance.previewObjectQueue.Enqueue(obj);
+    }
 }

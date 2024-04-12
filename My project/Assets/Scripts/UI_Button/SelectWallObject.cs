@@ -10,7 +10,7 @@ public class SelectWallObject : MonoBehaviour
     public void SelectButton()
     {
         PreviewSpawner.Instance.selectedObjectCategory = 1;
-        ObjectPool.Instance.objectNumber = objectNumber;
+        PreviewSpawner.Instance.objectNumber = objectNumber;
         /*PreviewSpawner.Instance.objPreviewPrefab = selectedObjectPreview;
         ObjectSpawner.Instance.selectedObject = selectedObject;*/
         StateManager.Instance.currentState = StateManager.CurrentState.Build;

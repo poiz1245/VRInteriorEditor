@@ -4911,7 +4911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb67ce81879022448d002f6da189c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolingObjectPrefab:
+  objectPrefab:
   - {fileID: 4405413918437472373, guid: 347e63b4d443e254494b15baf90d62eb, type: 3}
   - {fileID: 8632904273779812527, guid: 4f63b38313cdb8842a2943dcfd8aaa65, type: 3}
   - {fileID: 5495510149201365389, guid: 42c5532fe23975a4b89f04ffa3e16809, type: 3}
@@ -8361,6 +8361,7 @@ MonoBehaviour:
   rayPos: {x: 0, y: 0, z: 0}
   eulerAngle: {x: 0, y: 0, z: 0}
   selectedObjectCategory: 0
+  objectNumber: 0
   objPreviewPrefab: {fileID: 0}
   objPreviewinstance: {fileID: 0}
   controllerPos: {fileID: 1624604186}

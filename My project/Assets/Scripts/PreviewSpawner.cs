@@ -10,10 +10,11 @@ public class PreviewSpawner : MonoBehaviour
     public Vector3 rayPos;
     public Vector3 eulerAngle;
     public int selectedObjectCategory;
+    public int objectNumber;
 
     public GameObject objPreviewPrefab;
     //[SerializeField] GameObject objPreviewinstance;
-    [SerializeField] PreviewControll objPreviewinstance;
+    [SerializeField] GameObject objPreviewinstance;
 
     [SerializeField] Transform controllerPos;
     public bool isActive { get; private set; }
@@ -48,10 +49,6 @@ public class PreviewSpawner : MonoBehaviour
         {
             Spawn();
         }
-        else
-        {
-            //Despawn();
-        }
     }
 
     public void Spawn()
@@ -63,14 +60,9 @@ public class PreviewSpawner : MonoBehaviour
             rayPos = hitInfo.point;
             if (!isActive)
             {
-                objPreviewinstance = ObjectPool.GetObject();
+                objPreviewinstance = ObjectPool.GetObject(objectNumber);
                 isActive = true;
             }
-            /*if (!isActive && objPreviewinstance == null && objPreviewPrefab != null)
-            {
-                objPreviewinstance = Instantiate(objPreviewPrefab, hitInfo.point, Quaternion.Euler(eulerAngle));
-                isActive = true;
-            }*/
         }
         else if (isActive)
         {
@@ -82,9 +74,6 @@ public class PreviewSpawner : MonoBehaviour
     {
         ObjectPool.ReturnObject(objPreviewinstance);
         isActive = false;
-        /*Destroy(objPreviewinstance);
-        objPreviewinstance = null;
-        isActive = false;*/
     }
 
     private void LayerMaskSetting()
