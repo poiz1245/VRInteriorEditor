@@ -55,14 +55,17 @@ public class PreviewSpawner : MonoBehaviour
             {
                 Spawn();
             }
-            else if(StateManager.Instance.currentState != StateManager.CurrentState.Edit)
+            else if (StateManager.Instance.currentState != StateManager.CurrentState.Edit)
             {
                 Despawn(); //계속해서 설치되는걸 막기 위해서 있어야함
             }
         }
         else if (isActive)
         {
-            Despawn();
+            if (StateManager.Instance.currentState != StateManager.CurrentState.Edit)
+            {
+                Despawn();
+            }
         }
     }
 
