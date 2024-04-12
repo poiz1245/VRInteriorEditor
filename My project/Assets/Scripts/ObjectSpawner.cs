@@ -35,27 +35,12 @@ public class ObjectSpawner : MonoBehaviour
         if (PreviewSpawner.Instance.isActive)
         {
             StateManager.Instance.currentState = StateManager.CurrentState.Normal;
-            /*if(preObjectInstance == null)
-            {
-                objectInstance = Instantiate(selectedObject, PreviewSpawner.Instance.rayPos, Quaternion.Euler(eulerAngle));
-                StateManager.Instance.currentState = StateManager.CurrentState.Normal;
-            }
-            else if(preObjectInstance != null)
-            {
-                Respawn();
-            }*/
+            objectInstance = ObjectPool.GetObject(PreviewSpawner.Instance.objectNumber);
         }
     }
 
     public void Despawn()
     {
-        /*objectInstance.SetActive(false);
-        preObjectInstance = objectInstance;
-        objectInstance = null; */
-    }
-
-    public void Respawn()
-    {
-        //preObjectInstance.SetActive(true);
+        ObjectPool.ReturnObject(objectInstance);
     }
 }

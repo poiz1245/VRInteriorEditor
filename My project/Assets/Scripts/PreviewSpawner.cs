@@ -58,6 +58,7 @@ public class PreviewSpawner : MonoBehaviour
             hitLayer = hitInfo.collider.gameObject.layer;
             EulerSetting();
             rayPos = hitInfo.point;
+
             if (!isActive)
             {
                 objPreviewinstance = PreviewObjectPool.GetPreviewObject(objectNumber);
