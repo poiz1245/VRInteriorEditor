@@ -6,11 +6,13 @@ public class SelectFloorObject : MonoBehaviour
 {
     [SerializeField] GameObject selectedObjectPreview;
     [SerializeField] GameObject selectedObject;
-    [SerializeField] int objectNumber;
+
     public void SelectButton()
     {
+        EditMode editMode = selectedObject.GetComponent<EditMode>();
+
         PreviewSpawner.Instance.selectedObjectCategory = 2;
-        PreviewSpawner.Instance.objectNumber = objectNumber;
+        PreviewSpawner.Instance.objectID = editMode.myObjectID;
         StateManager.Instance.currentState = StateManager.CurrentState.Build;
     }
 }
