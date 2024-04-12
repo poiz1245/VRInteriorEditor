@@ -12,7 +12,8 @@ public class PreviewSpawner : MonoBehaviour
     public int selectedObjectCategory;
 
     public GameObject objPreviewPrefab;
-    [SerializeField] GameObject objPreviewinstance;
+    //[SerializeField] GameObject objPreviewinstance;
+    [SerializeField] PreviewControll objPreviewinstance;
 
     [SerializeField] Transform controllerPos;
     public bool isActive { get; private set; }
@@ -60,16 +61,22 @@ public class PreviewSpawner : MonoBehaviour
             hitLayer = hitInfo.collider.gameObject.layer;
             EulerSetting();
             rayPos = hitInfo.point;
-
-            if (!isActive && objPreviewinstance == null && objPreviewPrefab != null)
+            if (!isActive)
+            {
+                objPreviewinstance = ObjectPool.GetObject();
+                isActive = true;
+            }
+            /*if (!isActive && objPreviewinstance == null && objPreviewPrefab != null)
             {
                 objPreviewinstance = Instantiate(objPreviewPrefab, hitInfo.point, Quaternion.Euler(eulerAngle));
                 isActive = true;
-            }
+            }*/
         }
         else if (isActive)
         {
-            Despawn();
+            ObjectPool.ReturnObject(objPreviewinstance);
+            isActive = false;
+            //Despawn();
         }
     }
 
