@@ -40,6 +40,7 @@ public class EditMode : MonoBehaviour
 
             PreviewSpawner.Instance.objectID = myObjectID;
             PreviewSpawner.Instance.Spawn();
+            count--;
         }
     }
 
