@@ -8,6 +8,8 @@ public class EditMode : MonoBehaviour
 {
     [SerializeField] GameObject editUI;
     [SerializeField] GameObject objectPreview;
+    public int myObjectID;
+
     int count = 0;
 
     public void EditUIActivation()
@@ -33,9 +35,11 @@ public class EditMode : MonoBehaviour
     {
         if (StateManager.Instance.currentState == StateManager.CurrentState.Edit)
         {
-            ObjectSpawner.Instance.Despawn();
             editUI.SetActive(false);
-            StateManager.Instance.currentState = StateManager.CurrentState.Build;
+            gameObject.SetActive(false);
+
+            PreviewSpawner.Instance.objectID = myObjectID;
+            PreviewSpawner.Instance.Spawn();
         }
     }
 
