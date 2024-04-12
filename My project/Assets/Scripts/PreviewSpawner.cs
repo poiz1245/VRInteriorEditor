@@ -62,7 +62,7 @@ public class PreviewSpawner : MonoBehaviour
         }
         else if (isActive)
         {
-            if (StateManager.Instance.currentState != StateManager.CurrentState.Edit)
+            if (StateManager.Instance.currentState != StateManager.CurrentState.Edit) //이렇게 안하면 Edit에서 재배치 눌렀을 때 Ray가 벽 밖으로 나갔다가 돌아왔을 때 오브젝트 소환이 안됨
             {
                 Despawn();
             }
