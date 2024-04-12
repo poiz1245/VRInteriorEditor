@@ -49,13 +49,13 @@ public class ObjectSpawner : MonoBehaviour
 
     public void Despawn()
     {
-        objectInstance.SetActive(false);
+        /*objectInstance.SetActive(false);
         preObjectInstance = objectInstance;
-        objectInstance = null; 
+        objectInstance = null; */
     }
 
     public void Respawn()
     {
-        preObjectInstance.SetActive(true);
+        //preObjectInstance.SetActive(true);
     }
 }

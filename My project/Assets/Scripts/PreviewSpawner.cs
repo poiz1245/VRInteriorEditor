@@ -50,7 +50,7 @@ public class PreviewSpawner : MonoBehaviour
         }
         else
         {
-            Despawn();
+            //Despawn();
         }
     }
 
@@ -74,17 +74,17 @@ public class PreviewSpawner : MonoBehaviour
         }
         else if (isActive)
         {
-            ObjectPool.ReturnObject(objPreviewinstance);
-            isActive = false;
-            //Despawn();
+            Despawn();
         }
     }
 
-    private void Despawn()
+    public void Despawn()
     {
-        Destroy(objPreviewinstance);
-        objPreviewinstance = null;
+        ObjectPool.ReturnObject(objPreviewinstance);
         isActive = false;
+        /*Destroy(objPreviewinstance);
+        objPreviewinstance = null;
+        isActive = false;*/
     }
 
     private void LayerMaskSetting()
