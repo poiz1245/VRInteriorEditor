@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 114312014}
   - component: {fileID: 114312013}
   - component: {fileID: 114312012}
-  - component: {fileID: 114312011}
+  - component: {fileID: 114312015}
   m_Layer: 5
   m_Name: Button (Legacy) (2)
   m_TagString: Untagged
@@ -564,20 +564,6 @@ RectTransform:
   m_AnchoredPosition: {x: 792, y: -12}
   m_SizeDelta: {x: 375, y: 375}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &114312011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114312009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ea440a4c7616a84ba555e686c7b33e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedObjectPreview: {fileID: 8121423280065225767, guid: 25d93e6e74b820e40b90c19ae6b9ccbc, type: 3}
-  selectedObject: {fileID: 8121423280065225767, guid: f53b75d63a0f12e4f9207b643d400e0c, type: 3}
 --- !u!114 &114312012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,8 +608,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114312011}
-        m_TargetAssemblyTypeName: FloorObjectSpawn, Assembly-CSharp
+      - m_Target: {fileID: 114312015}
+        m_TargetAssemblyTypeName: SelectObject, Assembly-CSharp
         m_MethodName: SelectButton
         m_Mode: 1
         m_Arguments:
@@ -672,6 +658,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114312009}
   m_CullTransparentMesh: 1
+--- !u!114 &114312015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114312009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d520ed508467b146a1158eb888d6bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedObjectPreview: {fileID: 8121423280065225767, guid: 25d93e6e74b820e40b90c19ae6b9ccbc, type: 3}
+  selectedObject: {fileID: 8121423280065225767, guid: f53b75d63a0f12e4f9207b643d400e0c, type: 3}
 --- !u!1001 &117436517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2070,7 +2070,7 @@ GameObject:
   - component: {fileID: 226629543}
   - component: {fileID: 226629542}
   - component: {fileID: 226629541}
-  - component: {fileID: 226629540}
+  - component: {fileID: 226629544}
   m_Layer: 5
   m_Name: Button (Legacy) (4)
   m_TagString: Untagged
@@ -2099,20 +2099,6 @@ RectTransform:
   m_AnchoredPosition: {x: 402, y: -402}
   m_SizeDelta: {x: 375, y: 375}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &226629540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226629538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ea440a4c7616a84ba555e686c7b33e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedObjectPreview: {fileID: 639676852691503351, guid: fedb7f8877958a6439569056db24ebdb, type: 3}
-  selectedObject: {fileID: 639676852691503351, guid: dbe7b9e1570050841a8f1d6f3ee2629f, type: 3}
 --- !u!114 &226629541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2157,8 +2143,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 226629540}
-        m_TargetAssemblyTypeName: SelectFloorObject, Assembly-CSharp
+      - m_Target: {fileID: 114312015}
+        m_TargetAssemblyTypeName: SelectObject, Assembly-CSharp
         m_MethodName: SelectButton
         m_Mode: 1
         m_Arguments:
@@ -2207,6 +2193,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226629538}
   m_CullTransparentMesh: 1
+--- !u!114 &226629544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226629538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d520ed508467b146a1158eb888d6bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedObjectPreview: {fileID: 639676852691503351, guid: fedb7f8877958a6439569056db24ebdb, type: 3}
+  selectedObject: {fileID: 639676852691503351, guid: dbe7b9e1570050841a8f1d6f3ee2629f, type: 3}
 --- !u!1001 &266987970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3068,7 +3068,7 @@ GameObject:
   - component: {fileID: 370856647}
   - component: {fileID: 370856646}
   - component: {fileID: 370856645}
-  - component: {fileID: 370856644}
+  - component: {fileID: 370856648}
   m_Layer: 5
   m_Name: Button (Legacy) (1)
   m_TagString: Untagged
@@ -3097,20 +3097,6 @@ RectTransform:
   m_AnchoredPosition: {x: 402, y: -12}
   m_SizeDelta: {x: 375, y: 375}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &370856644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 370856642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ea440a4c7616a84ba555e686c7b33e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedObjectPreview: {fileID: 4921530691876524060, guid: ec9493a4df8f53c41b6767909fca1b5e, type: 3}
-  selectedObject: {fileID: 4921530691876524060, guid: 9613f127c4654fd4ca17526faa6e34bb, type: 3}
 --- !u!114 &370856645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3155,8 +3141,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 370856644}
-        m_TargetAssemblyTypeName: FloorObjectSpawn, Assembly-CSharp
+      - m_Target: {fileID: 370856648}
+        m_TargetAssemblyTypeName: SelectObject, Assembly-CSharp
         m_MethodName: SelectButton
         m_Mode: 1
         m_Arguments:
@@ -3205,6 +3191,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370856642}
   m_CullTransparentMesh: 1
+--- !u!114 &370856648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370856642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d520ed508467b146a1158eb888d6bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedObjectPreview: {fileID: 4921530691876524060, guid: ec9493a4df8f53c41b6767909fca1b5e, type: 3}
+  selectedObject: {fileID: 4921530691876524060, guid: 9613f127c4654fd4ca17526faa6e34bb, type: 3}
 --- !u!1 &387451729
 GameObject:
   m_ObjectHideFlags: 0
@@ -3368,9 +3368,9 @@ RectTransform:
   - {fileID: 198722221}
   m_Father: {fileID: 563892994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 146.1, y: -158.50002}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 283.85, y: 46.81}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &400860256
@@ -4722,7 +4722,7 @@ GameObject:
   - component: {fileID: 603131942}
   - component: {fileID: 603131941}
   - component: {fileID: 603131940}
-  - component: {fileID: 603131939}
+  - component: {fileID: 603131943}
   m_Layer: 5
   m_Name: Button (Legacy) (3)
   m_TagString: Untagged
@@ -4751,20 +4751,6 @@ RectTransform:
   m_AnchoredPosition: {x: 12, y: -402}
   m_SizeDelta: {x: 375, y: 375}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &603131939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603131937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ea440a4c7616a84ba555e686c7b33e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedObjectPreview: {fileID: 8814324382109723249, guid: 9658d543e03de66499c080c1768ffd94, type: 3}
-  selectedObject: {fileID: 8814324382109723249, guid: 0fee49bb1b67cbb4ab05a192352fd7c9, type: 3}
 --- !u!114 &603131940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4809,8 +4795,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 603131939}
-        m_TargetAssemblyTypeName: FloorObjectSpawn, Assembly-CSharp
+      - m_Target: {fileID: 114312015}
+        m_TargetAssemblyTypeName: SelectObject, Assembly-CSharp
         m_MethodName: SelectButton
         m_Mode: 1
         m_Arguments:
@@ -4859,6 +4845,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603131937}
   m_CullTransparentMesh: 1
+--- !u!114 &603131943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603131937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d520ed508467b146a1158eb888d6bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedObjectPreview: {fileID: 8814324382109723249, guid: 9658d543e03de66499c080c1768ffd94, type: 3}
+  selectedObject: {fileID: 8814324382109723249, guid: 0fee49bb1b67cbb4ab05a192352fd7c9, type: 3}
 --- !u!1 &613574943
 GameObject:
   m_ObjectHideFlags: 0
@@ -4936,7 +4936,7 @@ GameObject:
   - component: {fileID: 615347559}
   - component: {fileID: 615347558}
   - component: {fileID: 615347557}
-  - component: {fileID: 615347556}
+  - component: {fileID: 615347560}
   m_Layer: 5
   m_Name: Button (Legacy) (1)
   m_TagString: Untagged
@@ -4965,20 +4965,6 @@ RectTransform:
   m_AnchoredPosition: {x: 402, y: -12}
   m_SizeDelta: {x: 375, y: 375}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &615347556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615347554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ea440a4c7616a84ba555e686c7b33e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedObjectPreview: {fileID: 7468476488619290497, guid: 1872ef75c8521a841be99c0927d38aa8, type: 3}
-  selectedObject: {fileID: 7468476488619290497, guid: aacffe4a73d9b934ea85092756f457ab, type: 3}
 --- !u!114 &615347557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5023,8 +5009,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 615347556}
-        m_TargetAssemblyTypeName: FloorObjectSpawn, Assembly-CSharp
+      - m_Target: {fileID: 114312015}
+        m_TargetAssemblyTypeName: SelectObject, Assembly-CSharp
         m_MethodName: SelectButton
         m_Mode: 1
         m_Arguments:
@@ -5073,6 +5059,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615347554}
   m_CullTransparentMesh: 1
+--- !u!114 &615347560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615347554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d520ed508467b146a1158eb888d6bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedObjectPreview: {fileID: 7468476488619290497, guid: 1872ef75c8521a841be99c0927d38aa8, type: 3}
+  selectedObject: {fileID: 7468476488619290497, guid: aacffe4a73d9b934ea85092756f457ab, type: 3}
 --- !u!1 &617284258
 GameObject:
   m_ObjectHideFlags: 0
@@ -5259,9 +5259,9 @@ RectTransform:
   - {fileID: 1379436362}
   m_Father: {fileID: 563892994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 146.1, y: -107.00001}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 283.85, y: 46.81}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &653795729
@@ -5406,9 +5406,9 @@ RectTransform:
   - {fileID: 642894762}
   m_Father: {fileID: 563892994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 146.1, y: -4}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 283.85, y: 46.81}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &662844911
@@ -8077,7 +8077,7 @@ GameObject:
   - component: {fileID: 1157344955}
   - component: {fileID: 1157344954}
   - component: {fileID: 1157344953}
-  - component: {fileID: 1157344952}
+  - component: {fileID: 1157344956}
   m_Layer: 5
   m_Name: Button (Legacy) (2)
   m_TagString: Untagged
@@ -8106,20 +8106,6 @@ RectTransform:
   m_AnchoredPosition: {x: 792, y: -12}
   m_SizeDelta: {x: 375, y: 375}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &1157344952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157344950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ea440a4c7616a84ba555e686c7b33e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedObjectPreview: {fileID: 6982308244807511748, guid: 94de90bdfa8abef4b9180c742daeae03, type: 3}
-  selectedObject: {fileID: 6982308244807511748, guid: deb9c7803f41d864c8272ceb6ff2d290, type: 3}
 --- !u!114 &1157344953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8164,8 +8150,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1157344952}
-        m_TargetAssemblyTypeName: FloorObjectSpawn, Assembly-CSharp
+      - m_Target: {fileID: 1157344956}
+        m_TargetAssemblyTypeName: SelectObject, Assembly-CSharp
         m_MethodName: SelectButton
         m_Mode: 1
         m_Arguments:
@@ -8214,6 +8200,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157344950}
   m_CullTransparentMesh: 1
+--- !u!114 &1157344956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157344950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d520ed508467b146a1158eb888d6bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedObjectPreview: {fileID: 6982308244807511748, guid: 94de90bdfa8abef4b9180c742daeae03, type: 3}
+  selectedObject: {fileID: 6982308244807511748, guid: deb9c7803f41d864c8272ceb6ff2d290, type: 3}
 --- !u!1001 &1170462118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9143,8 +9143,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1396063147}
-        m_TargetAssemblyTypeName: FloorObjectSpawn, Assembly-CSharp
+      - m_Target: {fileID: 114312015}
+        m_TargetAssemblyTypeName: SelectObject, Assembly-CSharp
         m_MethodName: SelectButton
         m_Mode: 1
         m_Arguments:
@@ -9202,7 +9202,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1396063142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ea440a4c7616a84ba555e686c7b33e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d520ed508467b146a1158eb888d6bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selectedObjectPreview: {fileID: 780567771317026041, guid: 66495b2f9091c7f4e9bfa1f6c54d1cf2, type: 3}
@@ -11384,7 +11384,7 @@ GameObject:
   - component: {fileID: 1763981034}
   - component: {fileID: 1763981033}
   - component: {fileID: 1763981032}
-  - component: {fileID: 1763981031}
+  - component: {fileID: 1763981035}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -11413,20 +11413,6 @@ RectTransform:
   m_AnchoredPosition: {x: 12, y: -12}
   m_SizeDelta: {x: 375, y: 375}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &1763981031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763981029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ea440a4c7616a84ba555e686c7b33e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedObjectPreview: {fileID: 436950025568814515, guid: 3cf23d123e5311c41a9a2c98ec51a004, type: 3}
-  selectedObject: {fileID: 436950025568814515, guid: f654ef212370c2948b593977bd733164, type: 3}
 --- !u!114 &1763981032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11471,8 +11457,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1763981031}
-        m_TargetAssemblyTypeName: FloorObjectSpawn, Assembly-CSharp
+      - m_Target: {fileID: 1763981035}
+        m_TargetAssemblyTypeName: SelectObject, Assembly-CSharp
         m_MethodName: SelectButton
         m_Mode: 1
         m_Arguments:
@@ -11521,6 +11507,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763981029}
   m_CullTransparentMesh: 1
+--- !u!114 &1763981035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763981029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d520ed508467b146a1158eb888d6bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedObjectPreview: {fileID: 436950025568814515, guid: 3cf23d123e5311c41a9a2c98ec51a004, type: 3}
+  selectedObject: {fileID: 436950025568814515, guid: f654ef212370c2948b593977bd733164, type: 3}
 --- !u!4 &1794782641 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 264382079759274573, guid: dbe7b9e1570050841a8f1d6f3ee2629f, type: 3}
@@ -12273,9 +12273,9 @@ RectTransform:
   - {fileID: 1519491275}
   m_Father: {fileID: 563892994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 146.1, y: -55.500004}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 283.85, y: 46.81}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1924374729

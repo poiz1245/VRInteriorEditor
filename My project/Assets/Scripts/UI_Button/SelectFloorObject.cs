@@ -11,7 +11,7 @@ public class SelectFloorObject : MonoBehaviour
     {
         EditMode editMode = selectedObject.GetComponent<EditMode>();
 
-        PreviewSpawner.Instance.selectedObjectCategory = 2;
+        PreviewSpawner.Instance.selectedObjectCategory = editMode.myObjectCategory;
         PreviewSpawner.Instance.objectID = editMode.myObjectID;
         StateManager.Instance.currentState = StateManager.CurrentState.Build;
     }

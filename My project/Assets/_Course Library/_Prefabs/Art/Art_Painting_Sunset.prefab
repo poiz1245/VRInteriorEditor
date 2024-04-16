@@ -468,6 +468,7 @@ MonoBehaviour:
   editUI: {fileID: 4405531713097426508}
   objectPreview: {fileID: 4049584793189637479, guid: faa523f190124f84192491aff17ff984, type: 3}
   myObjectID: 3
+  myObjectCategory: 1
 --- !u!114 &-4365542768608708344
 MonoBehaviour:
   m_ObjectHideFlags: 0
