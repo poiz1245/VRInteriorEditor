@@ -9,6 +9,7 @@ public class EditMode : MonoBehaviour
     [SerializeField] GameObject editUI;
     [SerializeField] GameObject objectPreview;
     public int myObjectID;
+    public int myObjectCategory;
 
     int count = 0;
 
@@ -39,6 +40,7 @@ public class EditMode : MonoBehaviour
             gameObject.SetActive(false);
 
             PreviewSpawner.Instance.objectID = myObjectID;
+            PreviewSpawner.Instance.selectedObjectCategory = myObjectCategory;
             PreviewSpawner.Instance.Spawn();
             count--;
         }
