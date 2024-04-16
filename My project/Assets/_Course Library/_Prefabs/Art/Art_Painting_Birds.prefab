@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1465430453779799190}
   - component: {fileID: 3450653318703585920}
   - component: {fileID: 8052018517357795107}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ReLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 6541262440262204963}
   - component: {fileID: -7492402825450632891}
   - component: {fileID: 8626717673373666963}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Art_Painting_Birds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 4051783430316268480}
   - component: {fileID: 3966215258389008522}
   - component: {fileID: 3488828397782000369}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Delete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -686,7 +686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7888942838948115056}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EditUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}

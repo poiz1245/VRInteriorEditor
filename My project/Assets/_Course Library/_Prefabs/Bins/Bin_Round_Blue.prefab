@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5502283867082656926}
   - component: {fileID: 3238646781283630713}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 1285177569290198316}
   - component: {fileID: 3438546670911845488}
   - component: {fileID: 7982583421198289042}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bin_Round_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6489357705735228165}
   - component: {fileID: 4024882827510104050}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wall (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7774543544805249018}
   - component: {fileID: 6051463527836204217}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wall (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7145109406640736415}
   - component: {fileID: 6189634391251481449}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8418676688956794765}
   - component: {fileID: 3818029916653144312}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wall (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,7 +491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2067210050332433016}
   - component: {fileID: 8731971719058793446}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -552,7 +552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3937379735465932492}
   - component: {fileID: 348303903730475348}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,7 +604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6877140567024212613}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EditUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -638,7 +638,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4639769973943137754}
   - component: {fileID: 6097666145548015028}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +694,7 @@ GameObject:
   - component: {fileID: 8474591616414583893}
   - component: {fileID: 810686282689033021}
   - component: {fileID: 6099978651645268774}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ReLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -914,7 +914,7 @@ GameObject:
   - component: {fileID: 6063586054761399741}
   - component: {fileID: 8709521041429240736}
   - component: {fileID: 1951868649108565443}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Delete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1131,7 +1131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1208731410763190272}
   - component: {fileID: 6410040001166556219}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

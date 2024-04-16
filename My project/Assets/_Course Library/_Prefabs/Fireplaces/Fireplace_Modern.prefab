@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 842252565}
   - component: {fileID: 842252566}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 962515876946435849}
   - component: {fileID: -4931830748548188595}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fireplace_Modern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 2645407263757657940}
   - component: {fileID: 5475067586952915051}
   - component: {fileID: 7770525933472534856}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fireplace_Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 259255971045108886}
   - component: {fileID: 7580641629147897836}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Top_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 738384151838012370}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fireplace_Logs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8012305224580677329}
   - component: {fileID: 5129883417515043457}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Left_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7993491503795104085}
   - component: {fileID: 8039442599996519789}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pipe_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1060232767198400224}
   - component: {fileID: 574594930171814677}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Base_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9102274460902854186}
   - component: {fileID: 4907759661948043818}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Right_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 7735584225760082546}
   - component: {fileID: 6513407263505361573}
   - component: {fileID: 3611586827930508477}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fireplace_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,6 +729,10 @@ PrefabInstance:
       value: Particle_Fire
       objectReference: {fileID: 0}
     - target: {fileID: 5932572902414383951, guid: 3b83970ba45e64fc9a7749d8db540114, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932572902414383951, guid: 3b83970ba45e64fc9a7749d8db540114, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -797,6 +801,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f9c5a72efeeab2f408cc8a31710c6159, type: 3}
       propertyPath: m_Name
       value: Fireplace_modern_Log2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9c5a72efeeab2f408cc8a31710c6159, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -894,6 +902,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fireplace_modern_Log4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd58a5341918c884a948876bd8a90b9a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -989,6 +1001,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 896aa0408c13d9049abff6d64370b61a, type: 3}
       propertyPath: m_Name
       value: Fireplace_modern_Log3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 896aa0408c13d9049abff6d64370b61a, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1086,6 +1102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fireplace_modern_Log1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 567e9b06462eb8d40b193f22f3ceb41f, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1181,6 +1201,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9f194f8008a68124eb5eac565ed9f9f9, type: 3}
       propertyPath: m_Name
       value: Fireplace_modern_Log5
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9f194f8008a68124eb5eac565ed9f9f9, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

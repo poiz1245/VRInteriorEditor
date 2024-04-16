@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6182468982605352327}
   - component: {fileID: -6849142457851797497}
   - component: {fileID: 1214802663007509416}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Art_Painting_Mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
