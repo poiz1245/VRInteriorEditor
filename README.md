@@ -1,7 +1,7 @@
 # VRInteriorEditor
 ### 📋개발내용
 
-
+## 2024.04.16
 ### 1. NewInputSystem을 활용하여 VR컨트롤러의 버튼에 새로운 기능 할당
 - UI on/off
 - 오브젝트 설치
